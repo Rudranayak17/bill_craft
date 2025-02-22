@@ -3,6 +3,7 @@ import { Layout } from '@/components/layout';
 import { HomePage } from '@/pages/home';
 import { AboutPage } from '@/pages/about';
 import { SubscriptionPage } from '@/pages/subscription';
+import InvoiceChatbot from '@/pages/generate_invoice_ai/generate';
 
 export function Routes() {
   return (
@@ -10,6 +11,7 @@ export function Routes() {
       <Layout>
         <RouterRoutes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/chat-bot" element={<InvoiceChatbot />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/subscription" element={<SubscriptionPage />} />
         </RouterRoutes>
