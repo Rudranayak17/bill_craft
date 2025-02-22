@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import ChatInterface from './ChatInterface';
 import InvoiceTemplate from './InvoiceTemplete';
 import { generatePDFContent, downloadTxtFile, CHAT_STEPS } from '../utils/invoice';
+import InvoicePDFGenerator from './custum/InvoicePDFGenerator';
 
 const InvoiceChatbot = () => {
   const [messages, setMessages] = useState([
@@ -134,9 +135,12 @@ const InvoiceChatbot = () => {
         />
       </Card>
 
-      {showInvoice && (
+      {/* {showInvoice && (
         <InvoiceTemplate invoiceData={invoiceData} />
-      )}
+      )} */}
+      {showInvoice && (
+  <InvoicePDFGenerator invoiceData={invoiceData} />
+)}
     </div>
   );
 };
